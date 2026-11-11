@@ -1,0 +1,9 @@
+sites:
+  - name: site-test-ok
+    url: https://portal.tutorialsdojo.com/courses/aws-certified-cloud-practitioner-practice-exams/
+  - name: site-test-eroare
+    url: https://httpbin.org/status/500
+  - name: site-invalid
+    url: https://google.invalid
+  - name: site-rotaract
+    url: https://www.rotaractcismigiu.ro/ 
