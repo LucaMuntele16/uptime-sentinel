@@ -1,6 +1,6 @@
 import time
 import requests
-from classify import classify
+from app.checker.classify import classify
 
 def check_site(name, url, timeout_s, threshold_ms):
     start = time.perf_counter()
