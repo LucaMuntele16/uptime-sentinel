@@ -1,6 +1,25 @@
+# Python & Pytest
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Environment & Secrets
+.env
+.env.*
+
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
 *.tfvars
+!example.tfvars
 crash.log
-.venv/
+
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
