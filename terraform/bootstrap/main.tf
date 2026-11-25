@@ -6,6 +6,12 @@ terraform {
       version = "~> 6.0"
     }
   }
+  backend "s3" {
+    key = "bootstrap/terrafor.tfstate"
+    region = "eu-central-1"
+    encrypt = true
+    use_lockfile = true
+  }
 }
 
 provider "aws" {
@@ -20,6 +26,10 @@ resource "aws_s3_bucket" "state" {
   tags = {
     Project   = "uptime-sentinel"
     ManagedBy = "terraform"
+  }
+
+  lifecycle {
+    prevent_destroy = true
   }
 }
 
