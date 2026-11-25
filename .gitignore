@@ -16,6 +16,7 @@ __pycache__/
 *.tfvars
 !example.tfvars
 crash.log
+backend.hcl
 
 
 # OS & Editors
