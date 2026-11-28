@@ -39,6 +39,17 @@ module "registry" {
   tags            = local.tags
 }
 
+module "checker" {
+  source        = "../../modules/checker"
+  function_name = "${local.project}-${local.env}-checker"
+  table_arn     = module.storage.table_arn
+  tags          = local.tags
+}
+
+output "role_arn" {
+  value = module.checker.role_arn
+}
+
 output "table_name" {
   value = module.storage.table_name
 }
